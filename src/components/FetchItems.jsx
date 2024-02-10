@@ -11,7 +11,7 @@ const FetchItems = () => {
     const signal = controller.signal;
     if (fetchStatus.fetchDone) return;
     dispatch(fetchActions.markFetchingStarted());
-    fetch("http://localhost:8081/items", { signal })
+    fetch("https://chandupingili.github.io/Myntra_Clone_API/items.json", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchActions.markFetchDone());
